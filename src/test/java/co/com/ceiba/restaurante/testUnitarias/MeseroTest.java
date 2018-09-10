@@ -1,6 +1,6 @@
 package co.com.ceiba.restaurante.testUnitarias;
 
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,6 +80,6 @@ public class MeseroTest {
 		maestroService.generarPedido(platosTest);
 
 		// assert
-		assertNull(pedidoService.findAll());
+		assertNotNull(pedidoService.findAll());
 	}
 }
