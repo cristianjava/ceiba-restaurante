@@ -1,5 +1,6 @@
 package co.com.ceiba.restaurante.negocio.service;
 
+import co.com.ceiba.restaurante.negocio.entity.PlatosEntity;
 import co.com.ceiba.restaurante.negocio.model.Plato;
 
 public interface PlatoService {
@@ -17,5 +18,13 @@ public interface PlatoService {
 	 * @param plato
 	 * @return
 	 */
-	Object findByNombre(Plato plato);
+	PlatosEntity findByNombre(Plato plato);
+
+	/**
+	 * Metodo para consultar un plato por el PK
+	 * 
+	 * @param id
+	 * @return
+	 */
+	PlatosEntity findById(long id);
 }

@@ -3,6 +3,7 @@ package co.com.ceiba.restaurante.negocio.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import co.com.ceiba.restaurante.negocio.entity.PlatosEntity;
 import co.com.ceiba.restaurante.negocio.entity.builder.PlatosBuilder;
 import co.com.ceiba.restaurante.negocio.model.Plato;
 import co.com.ceiba.restaurante.negocio.repository.PlatoRepository;
@@ -30,8 +31,13 @@ public class PlatoServiceImpl implements PlatoService {
 	 * @see co.com.ceiba.restaurante.negocio.service.PlatoService#findByNombre(co.com.ceiba.restaurante.negocio.model.Plato)
 	 */
 	@Override
-	public Object findByNombre(Plato plato) {
+	public PlatosEntity findByNombre(Plato plato) {
 		return platoRepository.findByNombre(plato.getNombre());
+	}
+
+	@Override
+	public PlatosEntity findById(long id) {
+		return platoRepository.findByPk(id);
 	}
 
 }

@@ -19,7 +19,7 @@ public class TipoPlatoEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long id_tipo_plato;
 	
 	@NotNull
 	private String nombre;
@@ -31,11 +31,11 @@ public class TipoPlatoEntity {
 	private List<PlatosEntity> platos;
 
 	public long getId() {
-		return id;
+		return id_tipo_plato;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setId(long id_tipo_plato) {
+		this.id_tipo_plato = id_tipo_plato;
 	}
 
 	public String getNombre() {

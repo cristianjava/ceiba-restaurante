@@ -26,10 +26,10 @@ public class PlatoTest {
 	public void guardarPlato() {
 
 		// arrange
-		PlatoTestDataBuilder vehiculoTestDataBuilder = new PlatoTestDataBuilder();
+		PlatoTestDataBuilder platoTestDataBuilder = new PlatoTestDataBuilder();
 
 		// act
-		Plato platoTest= vehiculoTestDataBuilder.build();
+		Plato platoTest= platoTestDataBuilder.build();
 		platoService.guardarPlato(platoTest);
 
 		// assert

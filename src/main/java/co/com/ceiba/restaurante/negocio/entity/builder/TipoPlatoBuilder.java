@@ -17,4 +17,12 @@ public final class TipoPlatoBuilder {
 		return tipoPlatoEntity;
 	}
 
+	public static TipoPlato convertirAObjeto(TipoPlatoEntity tipoPlatoEntity) {
+		TipoPlato tipoPlato = new TipoPlato();
+		tipoPlato.setId(tipoPlatoEntity.getId());
+		tipoPlato.setNombre(tipoPlatoEntity.getNombre());
+		tipoPlato.setDescripcion(tipoPlatoEntity.getDescripcion());
+		return tipoPlato;
+	}
+
 }
